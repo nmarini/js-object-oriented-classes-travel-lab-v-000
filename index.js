@@ -24,16 +24,16 @@ class Route {
     this.endingLocation = endingLocation;
   }
   blocksTravelled(){
-      let horizontalDist = eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal)
-      let verticalDist = this.beginningLocation.vertical - this.endingLocation.vertical
+      let horizontalDist = eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal);
+      let verticalDist = this.beginningLocation.vertical - this.endingLocation.vertical;
 
-      return Math.abs(horizontalDist) + Math.abs(verticalDist)
+      return Math.abs(horizontalDist) + Math.abs(verticalDist);
   }
   estimatedTime(peak){
     if (peak) {
-      return this.blocksTravelled() / 2
+      return this.blocksTravelled() / 2;
     } else {
-      return this.blocksTravelled() / 3
+      return this.blocksTravelled() / 3;
     }
   }
 }

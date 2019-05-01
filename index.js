@@ -29,5 +29,11 @@ class Route {
 
       return Math.abs(horizontalDist) + Math.abs(verticalDist)
   }
-
+  estimatedTime(peak){
+    if (peak) {
+      return this.blocksTravelled / 2
+    } else {
+      return this.blocksTravelled / 3
+    }
+  }
 }
